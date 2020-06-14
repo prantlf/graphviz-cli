@@ -41,6 +41,8 @@ await renderGraphFromSource({ name: 'hello.dot' }, { format: 'png', name: 'hello
 
 ## Installation
 
+Make sure that you have installed [Node.js] 12 or newer.
+
 If you want to use the command-line tool, install this package globally using your favourite package manager ([NPM], [Yarn] or [PNPM]):
 
 ```
