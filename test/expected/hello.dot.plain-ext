@@ -1,0 +1,5 @@
+graph 1 1.4027 2.0778
+node Hello 0.70135 1.8278 1.2763 0.5 Hello solid Mdiamond blue blue
+node World 0.70135 0.59444 1.4027 0.5 World solid Mdiamond blue blue
+edge Hello World 4 0.70135 1.5757 0.70135 1.4073 0.70135 1.178 0.70135 0.98499 Say 0.84717 1.2111 solid red
+stop

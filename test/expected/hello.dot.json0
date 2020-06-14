@@ -1,0 +1,44 @@
+{
+  "name": "G",
+  "directed": true,
+  "strict": false,
+  "bb": "0,0,100.99,149.6",
+  "label": "Example",
+  "lheight": "0.23",
+  "lp": "50.497,12.4",
+  "lwidth": "0.69",
+  "_subgraph_cnt": 0,
+  "objects": [
+    {
+      "_gvid": 0,
+      "name": "Hello",
+      "color": "blue",
+      "height": "0.5",
+      "label": "\\N",
+      "pos": "50.497,131.6",
+      "shape": "Mdiamond",
+      "width": "1.2763"
+    },
+    {
+      "_gvid": 1,
+      "name": "World",
+      "color": "blue",
+      "height": "0.5",
+      "label": "\\N",
+      "pos": "50.497,42.8",
+      "shape": "Mdiamond",
+      "width": "1.4027"
+    }
+  ],
+  "edges": [
+    {
+      "_gvid": 0,
+      "tail": 0,
+      "head": 1,
+      "color": "red",
+      "label": "Say",
+      "lp": "60.996,87.2",
+      "pos": "e,50.497,60.913 50.497,113.45 50.497,101.32 50.497,84.819 50.497,70.919"
+    }
+  ]
+}

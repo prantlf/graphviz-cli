@@ -1,0 +1,9 @@
+extends: standard-with-typescript
+plugins:
+  - '@typescript-eslint'
+parser: '@typescript-eslint/parser'
+parserOptions:
+  project: tsconfig.json
+rules:
+  '@typescript-eslint/camelcase': off
+  '@typescript-eslint/naming-convention': error

@@ -1,0 +1,20 @@
+{
+  "house": [
+    "doors",
+    "windows",
+    "stairs",
+    "kitchen"
+  ],
+  "kitchen": [
+    "doors",
+    "windows",
+    "table",
+    "chair"
+  ],
+  "tree": [],
+  "car": [
+    "tires",
+    "lights",
+    "windows"
+  ]
+}

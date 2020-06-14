@@ -1,0 +1,66 @@
+.TH graphviz "1" "June 14, 2020" "" "graphviz-cli manual"
+
+.SH NAME
+graphviz-cli - Graphviz graph image generator
+
+.SH SYNOPSIS
+.B graphviz
+[-Vvy?] [-(KTon)<value>] [
+.I dot files
+]
+.RE
+
+.SH DESCRIPTION
+Command-line tool for generating graph images from Graphviz source scripts.
+
+.SH OPTIONS
+.B
+.IP "-Tv"
+set output format to 'v'
+.B
+.IP "-Kv"
+set layout engine to 'v' (overrides source script)
+.B
+.IP "-ofile"
+write output to 'file'
+.B
+.IP "-O"
+automatically generate an output filename based on the input filename
+with a .'format' appended. (Causes all -ofile options to be ignored.)
+.B
+.IP "-y"
+invert y coordinate in output
+.B
+.IP "-n[v]"
+no layout mode 'v' (=1)
+.B
+.IP "-v"
+enable verbose mode
+.B
+.IP "-V"
+print version and exit
+.B
+.IP "-?"
+print usage and exit
+
+.RE
+Available layout engines are: circo, dot, fdp, neato, osage, twopi.
+The default is dot. Available output formats are: svg, png, dot, xdot,
+plain, plain-ext, ps, ps2, json, json0. The default is dot.
+
+.SH EXAMPLES
+.B
+.IP "graphviz -Tsvg -O diagrams/*.dot"
+Render all graph scripts in a directory to SVG files with the same name.
+.B
+.IP "graphviz -Tpng -Kneato -odiagram.png diagram.dot"
+Render a graph scripts in a file to a PNG file.
+
+.SH BUGS
+graphviz-cli's bug tracker is located at <https://github.com/prantlf/graphviz-cli/issues>
+
+.SH DOCUMENTATION
+See the website for documentation <https://prantlf.github.io/graphviz-cli/>
+
+.SH AUTHOR
+Currently maintained by Ferdinand Prantl <prantlf@gmail.com>

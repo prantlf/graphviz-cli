@@ -1,0 +1,87 @@
+{
+  "name": "graphviz-cli",
+  "version": "0.0.1",
+  "description": "Command-line tool for generating graph images from Graphviz source scripts.",
+  "author": "Ferdinand Prantl <prantlf@gmail.com> (http://prantlf.tk/)",
+  "keywords": [
+    "requirejs",
+    "dependencies",
+    "module",
+    "tracer",
+    "trace",
+    "amdjs",
+    "amd"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prantlf/graphviz-cli.git"
+  },
+  "homepage": "https://github.com/prantlf/graphviz-cli#readme",
+  "bugs": "https://github.com/prantlf/graphviz-cli/issues",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "man"
+  ],
+  "bin": {
+    "graphviz": "bin/graphviz.js"
+  },
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "man": [
+    "man/graphviz.1"
+  ],
+  "scripts": {
+    "build:ts": "tsc test/typings.ts",
+    "build": "npm run build:ts",
+    "lint:js": "eslint --cache --max-warnings=0 --ignore-pattern=test/typings.js bin lib test",
+    "lint:ts": "eslint --cache --max-warnings=0 --cache-location .tslintcache -c .tslintrc.yml --ext=.ts lib test",
+    "lint": "npm run lint:js && npm run lint:ts",
+    "fix:js": "eslint --cache --max-warnings=0 --fix --ignore-pattern=test/typings.js bin lib test",
+    "fix:ts": "eslint --cache --max-warnings=0 --cache-location .tslintcache -c .tslintrc.yml --ext=.ts --fix lib test",
+    "fix": "npm run fix:js && npm run fix:ts",
+    "test:ts": "node test/typings",
+    "test:cli": "nyc --silent ./bin/graphviz.js -? && nyc --silent --no-clean ./bin/graphviz.js -V && mkdir -p test/actual && cat test/hello.dot | nyc --silent --no-clean ./bin/graphviz.js > test/actual/hello.dot.dot && nyc --silent --no-clean ./bin/graphviz.js -Tsvg -otest/actual/hello.dot.svg test/hello.dot && nyc --silent --no-clean cp test/hello.dot test/actual/hello.dot && nyc --silent --no-clean ./bin/graphviz.js -Tjson -O test/actual/hello.dot && rm test/actual/hello.dot && nyc --silent --no-clean ./bin/graphviz.js -v -Tjson0 -otest/actual/hello.dot.json0 test/hello.dot && nyc --silent --no-clean ./bin/graphviz.js -v -Tplain test/hello.dot > test/actual/hello.dot.plain && cat test/hello.dot | nyc --silent --no-clean ./bin/graphviz.js -v -Tplain-ext -otest/actual/hello.dot.plain-ext && nyc --silent --no-clean ./bin/graphviz.js -Kneato -Tps -otest/actual/hello.dot.ps test/hello.dot && nyc --silent --no-clean ./bin/graphviz.js -y -Tps2 -otest/actual/hello.dot.ps2 test/hello.dot && nyc --silent --no-clean ./bin/graphviz.js -n1 -Tpng -otest/actual/hello.dot.png test/hello.dot && cat test/hello.dot | nyc --silent --no-clean ./bin/graphviz.js -v -Txdot > test/actual/hello.dot.xdot",
+    "test:err": "nyc --silent --no-clean ./bin/graphviz.js -Kinvalid || nyc --silent --no-clean ./bin/graphviz.js -v -Tinvalid || nyc --silent --no-clean ./bin/graphviz.js -n2 || nyc --silent --no-clean ./bin/graphviz.js -o || nyc --silent --no-clean ./bin/graphviz.js -K || nyc --silent --no-clean ./bin/graphviz.js -T || nyc --silent --no-clean ./bin/graphviz.js -Ounexpected || nyc --silent --no-clean ./bin/graphviz.js -v -X || true",
+    "test:cmp": "nyc --silent --no-clean node test/test",
+    "test:cov": "nyc report && nyc check-coverage",
+    "test": "npm run test:ts && npm run test:cli && npm run test:err && npm run test:cmp && npm run test:cov",
+    "all": "npm run build && npm run lint && npm run test"
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
+    "branches": 95,
+    "functions": 100,
+    "lines": 100,
+    "statements": 100
+  },
+  "dependencies": {
+    "@aduh95/viz.js": "3.0.1"
+  },
+  "peerDependencies": {
+    "canvas": "2.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "14.0.13",
+    "@typescript-eslint/eslint-plugin": "3.2.0",
+    "@typescript-eslint/parser": "3.2.0",
+    "canvas": "2.6.1",
+    "eslint": "7.2.0",
+    "eslint-config-standard": "14.1.1",
+    "eslint-config-standard-with-typescript": "18.0.2",
+    "eslint-plugin-import": "2.21.2",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-standard": "4.0.1",
+    "nyc": "15.1.0",
+    "test": "0.6.0",
+    "typescript": "3.9.5"
+  }
+}

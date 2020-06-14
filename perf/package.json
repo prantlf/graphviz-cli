@@ -1,0 +1,13 @@
+{
+  "name": "graphviz-cli-performance",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "lint": "../node_modules/.bin/eslint --fix .",
+    "test": "node generate-svg ; node generate-png"
+  },
+  "devDependencies": {
+    "benchmark": "2.1.4",
+    "graphviz": "0.0.9"
+  }
+}
