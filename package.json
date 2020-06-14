@@ -4,13 +4,9 @@
   "description": "Command-line tool for generating graph images from Graphviz source scripts.",
   "author": "Ferdinand Prantl <prantlf@gmail.com> (http://prantlf.tk/)",
   "keywords": [
-    "requirejs",
-    "dependencies",
-    "module",
-    "tracer",
-    "trace",
-    "amdjs",
-    "amd"
+    "graphviz",
+    "graph",
+    "dot"
   ],
   "repository": {
     "type": "git",
