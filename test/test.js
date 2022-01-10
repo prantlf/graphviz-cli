@@ -10,7 +10,7 @@ exports['test cli generates expected output'] = async assert => {
     const expected = await readFile(join(__dirname, `expected/hello.dot.${format}`), encoding)
     const actual = await readFile(join(__dirname, `actual/hello.dot.${format}`), encoding)
     if (format === 'png') {
-      if (process.env.TRAVIS) console.log(`Skipping PNG test. Size ${actual.length} bytes.`)
+      if (process.env.CI) console.log(`Skipping PNG test. Size ${actual.length} bytes.`)
       else assert.ok(expected.equals(actual), format)
     } else {
       assert.strictEqual(expected, actual, format)
