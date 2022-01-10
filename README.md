@@ -141,7 +141,7 @@ List of available graph outout formats: `svg`, `png`, `dot`, `xdot`, `plain`, `p
 
 ## License
 
-Copyright (c) 2020 Ferdinand Prantl
+Copyright (c) 2020-2022 Ferdinand Prantl
 
 Licensed under the MIT license.
 
