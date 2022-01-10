@@ -7,3 +7,5 @@ parserOptions:
 rules:
   '@typescript-eslint/camelcase': off
   '@typescript-eslint/naming-convention': error
+  # Complains that strictNullCHecks is missing in tsconfig.json
+  '@typescript-eslint/strict-boolean-expressions': off

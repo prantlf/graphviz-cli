@@ -95,6 +95,8 @@ for (let i = 2, args = process.argv, l = args.length; i < l; ++i) {
         process.stdout.write(`${version}
 `)
         process.exit(0)
+        /* istanbul ignore next */
+        break
       case '?':
         checkNoValue()
         usage()

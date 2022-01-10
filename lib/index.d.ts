@@ -11,7 +11,7 @@ interface Options {
   nop?: 0 | 1
 }
 
-export var engines: string[]
-export var formats: string[]
+export const engines: string[]
+export const formats: string[]
 
 export function renderGraphFromSource (source?: Source, options?: Options): Promise<string>

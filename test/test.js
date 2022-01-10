@@ -1,13 +1,14 @@
 const { formats, renderGraphFromSource } = require('../lib/index')
 const convertSVGToPNG = require('../lib/svg-to-png')
+const { join } = require('path')
 const { promisify } = require('util')
 const readFile = promisify(require('fs').readFile)
 
 exports['test cli generates expected output'] = async assert => {
   for (const format of formats) {
     const encoding = format === 'png' ? undefined : 'utf-8'
-    const expected = await readFile(`${__dirname}/expected/hello.dot.${format}`, encoding)
-    const actual = await readFile(`${__dirname}/actual/hello.dot.${format}`, encoding)
+    const expected = await readFile(join(__dirname, `expected/hello.dot.${format}`), encoding)
+    const actual = await readFile(join(__dirname, `actual/hello.dot.${format}`), encoding)
     if (format === 'png') {
       if (process.env.TRAVIS) console.log(`Skipping PNG test. Size ${actual.length} bytes.`)
       else assert.ok(expected.equals(actual), format)
