@@ -1,11 +1,9 @@
 # graphviz-cli
 
 [![npm](https://img.shields.io/npm/v/graphviz-cli)](https://www.npmjs.com/package/graphviz-cli#top)
-[![Build Status](https://travis-ci.org/prantlf/graphviz-cli.svg?branch=master)](https://travis-ci.org/prantlf/graphviz-cli)
 [![codecov](https://codecov.io/gh/prantlf/graphviz-cli/branch/master/graph/badge.svg)](https://codecov.io/gh/prantlf/graphviz-cli)
 [![codebeat badge](https://codebeat.co/badges/9d85c898-df08-42fb-8ab9-407dc2ce2d22)](https://codebeat.co/projects/github-com-prantlf-graphviz-cli-master)
-[![Dependency Status](https://david-dm.org/prantlf/graphviz-cli.svg)](https://david-dm.org/prantlf/graphviz-cli)
-[![devDependency Status](https://david-dm.org/prantlf/graphviz-cli/dev-status.svg)](https://david-dm.org/prantlf/graphviz-cli#info=devDependencies)
+![Dependency status](https://img.shields.io/librariesio/release/npm/graphviz-cli)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 Command-line tool and [API] for generating graph images from [Graphviz] source scripts.
