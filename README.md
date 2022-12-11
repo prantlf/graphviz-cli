@@ -128,7 +128,7 @@ Available options:
 | `yInvert` | `boolean` | invert the y-coordinate in the graph output |
 | `nop`     | `number`  | no layout mode 'v' (`0` or `1`)             |
 
-If `name` is not provided the output will be available only in the Promise. If the format `png` is specified, the NPM module [node-canvas] has to be installed, which is required as a peer-dependency of this package.
+If `name` is not provided the output will be available only in the Promise. If the format `png` is specified, the NPM module [node-canvas] has to be installed in addition to this package.
 
 ### engines
 
