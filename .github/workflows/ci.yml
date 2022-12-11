@@ -22,9 +22,9 @@ jobs:
         run_install: |
           - args: [--frozen-lockfile, --no-verify-store-integrity]
     - name: Test
-      run: |
-        npm run all
-        pnpx -y codecov --disable=gcov
+      run: npm test
+    - name: Coverage
+      uses: codecov/codecov-action@v2
     - name: Publish
       uses: cycjimmy/semantic-release-action@v2
       with:

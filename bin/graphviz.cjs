@@ -71,6 +71,7 @@ for (let i = 2, args = process.argv, l = args.length; i < l; ++i) {
         continue
       case 'n':
         nop = match[2]
+        /* c8 ignore next */
         nop = nop ? +nop : 0
         if (nop !== 0 && nop !== 1) fail(`Invalid no-layout mode: "${match[2]}".`)
         continue

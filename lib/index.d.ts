@@ -6,7 +6,7 @@ interface Source {
 interface Options {
   name?: string
   engine?: 'circo' | 'dot' | 'fdp' | 'neato' | 'osage' | 'twopi'
-  format?: 'svg' | 'png' | 'dot' | 'xdot' | 'plain' | 'plain-ext' | 'ps' | 'ps2' | 'json' | 'json0'
+  format?: 'svg' | 'png' | 'dot' | 'xdot' | 'plain' | 'plain-ext' | 'ps' | 'ps2' | 'json' | 'json0' | 'canon'
   yInvert?: boolean
   nop?: 0 | 1
 }

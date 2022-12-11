@@ -1,6 +1,0 @@
-extends:
-  - standard
-  - eslint:recommended
-rules:
-  eqeqeq: [warn]
-  no-eq-null: [warn]

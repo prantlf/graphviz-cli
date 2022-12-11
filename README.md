@@ -4,7 +4,6 @@
 [![codecov](https://codecov.io/gh/prantlf/graphviz-cli/branch/master/graph/badge.svg)](https://codecov.io/gh/prantlf/graphviz-cli)
 [![codebeat badge](https://codebeat.co/badges/9d85c898-df08-42fb-8ab9-407dc2ce2d22)](https://codebeat.co/projects/github-com-prantlf-graphviz-cli-master)
 ![Dependency status](https://img.shields.io/librariesio/release/npm/graphviz-cli)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 Command-line tool and [API] for generating graph images from [Graphviz] source scripts.
 
@@ -39,7 +38,7 @@ await renderGraphFromSource({ name: 'hello.dot' }, { format: 'png', name: 'hello
 
 ## Installation
 
-Make sure that you have installed [Node.js] 12 or newer.
+Make sure that you have installed [Node.js] 14.8 or newer.
 
 If you want to use the command-line tool, install this package globally using your favourite package manager ([NPM], [Yarn] or [PNPM]):
 
@@ -64,6 +63,8 @@ npm i canvas
 yarn add canvas
 pnpm i canvas
 ```
+
+Starting from the version 2.0.0, [node-canvas] is not a peer dependency any more, because NPM installs the peer dependencies automatically, making them not optional any more.
 
 ## Command-line
 
@@ -123,7 +124,7 @@ Available options:
 |-----------|-----------|---------------------------------------------|
 | `name`    | `string`  | file name for the generated graph output    |
 | `engine`  | `string`  | type of the layout to use for the graph rendering (`circo`, `dot`, `fdp`, `neato`, `osage`, `twopi`, default is `dot`)                   |
-| `format`  | `string`  | type of the output for the rendered graph (`svg`, `png`, `dot`, `xdot`, `plain`, `plain-ext`, `ps`, `ps2`, `json`, `json0`, default is `dot`) |
+| `format`  | `string`  | type of the output for the rendered graph (`svg`, `png`, `dot`, `xdot`, `plain`, `plain-ext`, `ps`, `ps2`, `json`, `json0`, `canon`, default is `dot`) |
 | `yInvert` | `boolean` | invert the y-coordinate in the graph output |
 | `nop`     | `number`  | no layout mode 'v' (`0` or `1`)             |
 
@@ -135,7 +136,7 @@ List of available graph layout engines: `circo`, `dot`, `fdp`, `neato`, `osage`,
 
 ### formats
 
-List of available graph outout formats: `svg`, `png`, `dot`, `xdot`, `plain`, `plain-ext`, `ps`, `ps2`, `json`, `json0`.
+List of available graph outout formats: `svg`, `png`, `dot`, `xdot`, `plain`, `plain-ext`, `ps`, `ps2`, `json`, `json0`, `canon`.
 
 ## License
 

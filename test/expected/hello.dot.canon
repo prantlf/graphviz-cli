@@ -1,0 +1,13 @@
+digraph G {
+	graph [bb="0 0 101 150",
+		label=Example
+	];
+	node [color=blue,
+		label="\N",
+		shape=Mdiamond
+	];
+	edge [color=red,
+		label=Say
+	];
+	Hello -> World;
+}

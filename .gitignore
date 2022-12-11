@@ -1,9 +1,5 @@
 .DS_Store
-.eslintcache
-.nyc_output
-.tslintcache
 coverage
+lib/*.cjs
 node_modules
-npm-debug.log
 test/actual
-test/typings.js
