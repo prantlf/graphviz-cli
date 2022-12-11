@@ -7,11 +7,11 @@ $ pnpm i
 $ npm test
 
 generate-svg:
-  exec x 3.15 ops/sec ±1.50% (20 runs sampled)
-  wasm x 454 ops/sec ±94.21% (82 runs sampled)
+  exec x 5.52 ops/sec ±2.41% (31 runs sampled)
+  wasm x 446 ops/sec ±105.65% (81 runs sampled)
   fastest is wasm
 generate-png:
-  exec x 2.91 ops/sec ±2.64% (19 runs sampled)
-  wasm x 78.14 ops/sec ±81.49% (76 runs sampled)
+  exec x 5.14 ops/sec ±2.97% (29 runs sampled)
+  wasm x 78.54 ops/sec ±54.24% (78 runs sampled)
   fastest is wasm
 ```

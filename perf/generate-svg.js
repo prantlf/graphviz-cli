@@ -1,12 +1,13 @@
-const { createGraphExample, configureGraphviz } = require('./graph-support')
-const dot2svg = require('@aduh95/viz.js/async')
-const { Suite } = require('benchmark')
+import { createGraphExample, configureGraphviz } from './graph-support.js'
+import dot2svg from '@aduh95/viz.js/async'
+import benchmnark from 'benchmark'
 
+const { Suite } = benchmnark
 const { graph, dot } = createGraphExample()
 const options = configureGraphviz('svg')
 
 function renderWithExec (deferred) {
-  graph.render(options, () => deferred.resolve(), (code, output, message) => console.error(message))
+  graph.render(options, () => deferred.resolve(), (_code, _output, message) => console.error(message))
 }
 
 function renderWithWasm (deferred) {

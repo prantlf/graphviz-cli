@@ -1,13 +1,14 @@
-const { createGraphExample, configureGraphviz } = require('./graph-support')
-const dot2svg = require('@aduh95/viz.js/async')
-const { createCanvas, Image } = require('canvas')
-const { Suite } = require('benchmark')
+import { createGraphExample, configureGraphviz } from './graph-support.js'
+import dot2svg from '@aduh95/viz.js/async'
+import { createCanvas, Image } from 'canvas'
+import benchmnark from 'benchmark'
 
+const { Suite } = benchmnark
 const { graph, dot } = createGraphExample()
 const options = configureGraphviz('png')
 
 function renderWithExec (deferred) {
-  graph.render(options, () => deferred.resolve(), (code, output, message) => console.error(message))
+  graph.render(options, () => deferred.resolve(), (_code, _output, message) => console.error(message))
 }
 
 function convertSVGToPNG (svg) {

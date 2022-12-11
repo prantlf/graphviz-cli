@@ -1,5 +1,9 @@
-const { readFileSync } = require('fs')
-const { digraph } = require('graphviz')
+import { readFileSync } from 'fs'
+import { digraph } from 'graphviz'
+import { dirname } from 'path'
+import { fileURLToPath } from 'url'
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
 
 function mergeDefaults (defaults, options) {
   if (options) {
@@ -11,7 +15,7 @@ function mergeDefaults (defaults, options) {
   return defaults
 }
 
-function configureGraphviz (type) {
+export function configureGraphviz (type) {
   return {
     type,
     G: mergeDefaults({
@@ -66,11 +70,9 @@ function createGraph (modules) {
   }
 }
 
-function createGraphExample () {
+export function createGraphExample () {
   const tree = JSON.parse(readFileSync(`${__dirname}/example.json`, 'utf-8'))
   const graph = createGraph(tree)
   const dot = graph.to_dot()
   return { graph, dot }
 }
-
-module.exports = { createGraphExample, configureGraphviz }
