@@ -1,6 +1,6 @@
 {
   "name": "graphviz-cli",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Command-line tool for generating graph images from Graphviz source scripts.",
   "author": "Ferdinand Prantl <prantlf@gmail.com> (http://prantlf.tk/)",
   "keywords": [

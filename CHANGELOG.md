@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/prantlf/graphviz-cli/compare/v1.0.1...v2.0.0) (2022-12-11)
+
+
+### Features
+
+* Support ESM, upgrade dependencies ([dbb0927](https://github.com/prantlf/graphviz-cli/commit/dbb09277072a7ec80fe195c25895aec117e8ce19))
+
+
+### BREAKING CHANGES
+
+* The minimum Node.js version is 14.8 now. Declaring CJS and ESM exports in `package.json` works reliably in Node.js 14.8 or newer.
+
 ## [1.0.1](https://github.com/prantlf/graphviz-cli/compare/v1.0.0...v1.0.1) (2022-01-10)
 
 ### Bug Fixes
